@@ -76,11 +76,12 @@ Day 15
     - shutil
     - webbrowser
 - used json file for more comprehensive data structures of this shit
+
+Day 16
+- How to build a graphical user interface or GUI
+    - the main file is your frontend while your functions and any other branched files are your backend
+    - where to find third party modules?
+        - you can find it on pypi third party libraries
+    - I've learned GUI libraries including the FreeSimpleGui
+
 """
-
-
-def say_something(say):
-    return say
-
-
-print(say_something('hello muelvin!'))

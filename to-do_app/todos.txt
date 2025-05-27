@@ -1,5 +1,6 @@
 berserk
-mit lecture
 read
-goal setting
 how to budget
+python course
+ai agent
+school requirement
