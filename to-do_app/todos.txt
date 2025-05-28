@@ -1,4 +1,3 @@
-berserk
-read
-how to budget
-python courseread you son of a bitch
+Python course
+Exercise
+Read
