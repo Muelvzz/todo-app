@@ -7,6 +7,7 @@ input_box = FGS.InputText(tooltip='Type the task')
 add_button = FGS.Button("Add")
 
 window = FGS.Window("Muelvin's Today Lists", layout=[
-                    [label], [input_box, add_button]])
+                    [label], [input_box, add_button]],
+                    font=("Arial", 15))
 window.read()
 window.close()
