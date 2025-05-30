@@ -13,9 +13,10 @@ list_box = FGS.Listbox(values=functions.get_todos(),
                        enable_events=True,
                        size=[50, 7])
 
-add_button = FGS.Button(image_source="complete.png")
+add_button = FGS.Button(image_source=r"to-do_app\add.png",
+                        tooltip="Add Todo", key="Add")
 edit_button = FGS.Button("Edit")
-complete_button = FGS.Button("Complete")
+complete_button = FGS.Button(image_source="to-do_app\complete.png")
 Exit_button = FGS.Button("Exit")
 
 window = FGS.Window("Muelvin's Today Lists", layout=[
