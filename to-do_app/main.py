@@ -1,5 +1,10 @@
 from functions import get_todos, write_todos
 import time
+import os
+
+if not os.path.exists('todos.txt'):
+    with open('todos.txt', 'w') as file:
+        pass
 
 now = time.strftime("%b-%d, %Y %H:%M")
 print(f"The day is {now}")

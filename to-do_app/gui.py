@@ -11,26 +11,26 @@ input_box = FGS.InputText(tooltip='Type the task', key="todo")
 list_box = FGS.Listbox(values=functions.get_todos(),
                        key="todos",
                        enable_events=True,
-                       size=[50, 7])
+                       size=[45, 7])
 
 add_button = FGS.Button(image_source=r"to-do_app\add.png",
-                        tooltip="Add Todo", key="Add")
+                        tooltip="Add Todo", key="Add",)
 edit_button = FGS.Button("Edit")
 complete_button = FGS.Button(image_source="to-do_app\complete.png")
 Exit_button = FGS.Button("Exit")
 
-window = FGS.Window("Muelvin's Today Lists", layout=[
-                    [label_time],
-                    [label1, input_box, add_button],
-                    [list_box, edit_button, complete_button],
-                    [Exit_button]],
+left_columns = FGS.Column([[label_time], [label1], [input_box], [list_box]])
+right_columns = FGS.Column([[add_button], [edit_button], [
+    complete_button], [Exit_button]])
+
+layout = [[left_columns, right_columns]]
+
+window = FGS.Window("Muelvin's Today Lists", layout,
                     font=("Arial", 15))
 
 while True:
     event, value = window.read(timeout=10)
     window['clock'].update(value=time.strftime("%b-%d, %Y %H:%M:%S"))
-    print(event)
-    print(value)
     match event:
 
         case "Add":
