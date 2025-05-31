@@ -1,7 +1,2 @@
-Finish Day 18 Python Course
-Parti-time Job
-Solve Leetcode Questions
-Print academic enrollment requirements
 Start Networking
-hellohello againhello ulit
-hello ulit
+Python course
