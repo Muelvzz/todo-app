@@ -3,6 +3,13 @@ import functions
 
 todos = functions.get_todos()
 
+
+def add_todo():
+    todo = sl.session_state['new_todo'] + '\n'
+    todos.append(todo)
+    functions.write_todos(todos)
+
+
 sl.title("My To-do List")
 sl.subheader("Melbin's Personal Today List")
 sl.write('You can add, edit, and complete task...')
@@ -10,4 +17,5 @@ sl.write('You can add, edit, and complete task...')
 for task in todos:
     sl.checkbox(task)
 
-sl.text_input(label='', placeholder='Enter task')
+sl.text_input(label=' ', placeholder='Enter task',
+              on_change=add_todo, key='new_todo')
